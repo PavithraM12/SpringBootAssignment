@@ -31,6 +31,7 @@ public class ItemController {
     @GetMapping("/{id}")
     public Item getItemById(@PathVariable int id){
         return itemService.getItemById(id);
+
     }
 
     @DeleteMapping("/{id}")

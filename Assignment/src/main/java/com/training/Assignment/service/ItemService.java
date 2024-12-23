@@ -23,7 +23,7 @@ public class ItemService {
     }
 
     public Item getItemById(int id){
-        return itemRepository.findById(id).orElse(null);
+        return itemRepository.findById(id).orElseThrow(() -> new RuntimeException("Item " + id + " is not found."));
     }
 
     public Item deleteItemById(int id){
